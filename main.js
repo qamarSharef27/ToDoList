@@ -17,8 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
             listItem.innerHTML = `
                 <input type="checkbox" class="task-checkbox" data-index="${index}" ${task.completed ? "checked" : ""}>
                 <span class="task-text">${task.text}</span>
-                <button class="edit-button">Edit</button>
-                <button class="delete-button">Delete</button>
+                <button class="edit-button"><i class="fa fa-edit"></i></button>
+                <button class="delete-button"><i class="fa fa-trash"></i></button>
+
             `;
             taskList.appendChild(listItem);
 
@@ -31,14 +32,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const editButton = listItem.querySelector(".edit-button");
             editButton.addEventListener("click", () => {
-                const newText = prompt("Edit task:", task.text);
-                if (newText !== null) {
-                    tasks[index].text = newText;
-                    updateLocalStorage();
-                    renderTasks();
-                }
-            });
-
+                const textElement = listItem.querySelector(".task-text");
+                const inputElement = document.createElement("input");
+                inputElement.type = "text";
+                inputElement.value = textElement.textContent;
+            
+                inputElement.addEventListener("keyup", (event) => {
+                    if (event.key === "Enter") {
+                        const newText = inputElement.value.trim();
+                        if (newText !== "") {
+                            tasks[index].text = newText;
+                            updateLocalStorage();
+                            renderTasks();
+                        }
+                    } else if (event.key === "Escape") {
+                        renderTasks(); 
+                    }
+                });
+            
+                textElement.replaceWith(inputElement);
+                inputElement.focus();
+            });            
+            
+        
             const checkbox = listItem.querySelector(".task-checkbox");
             checkbox.addEventListener("change", (event) => {
                 tasks[index].completed = event.target.checked;
