@@ -6,8 +6,12 @@ html, body, h1, h2, h3, p, ul, li {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #272933;
+  background-color: #7cb8dc;
   color: #FFF;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center center; 
+  background-attachment: fixed;
 }
 
 .mainclass {
@@ -31,7 +35,7 @@ body {
 }
 
 #HeaderText {
-  color: #FFF;
+  color: #7cb8dc;
   font-family: 'Racing Sans One', sans-serif;
   font-size: 2rem;
   font-weight: 400;
@@ -89,12 +93,12 @@ body {
   flex-grow: 1;
   padding: 8px;
   border-radius: 20px;
-  background: #D9D9D9;
+  background-color: rgb(190, 223, 235);
 }
 
 #addButton {
   border: none;
-  background: #7F7E83;
+  background: #7cb8dc;
   color: #FFF;
   border-radius: 20px;
   padding: 8px 16px;
@@ -102,13 +106,12 @@ body {
 }
 
 #addButton:hover {
-  background-color: #6c6b70;
+  background-color: #5faad5;
 }
 
 #Line {
- /* width:  100%;*/
   height: 1px;
-  background: #FFF;
+  background: #316ba9;
   margin: 20px;  
   padding: 1px 16px;
 
@@ -120,7 +123,7 @@ ul {
 }
 
 li {
-  background: #747171;
+  background: #7cb8dc;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
@@ -141,14 +144,14 @@ li .container {
 }
 
 li button {
-  margin: 4px;
-  background: #747171;
+  margin: 2px;
+  background: #7cb8dc;
   color: #fff;
   border: none;
   border-radius: 5px;
   padding: 0;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 13px;
   position: relative;
   float: right;
 }
@@ -158,7 +161,22 @@ button i {
    height: 100%;
 }
 
+.form-container {
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 2); 
+}
 
+.form-line {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  margin: 10px 0;
+}
 
 
 
