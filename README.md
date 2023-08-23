@@ -1,7 +1,7 @@
 # To-Do List App Project
 Welcome to the To-Do List App Project, this is a simple to-do list app using Dom and local storage by **JavaScript**, **HTML**, and **CSS** to store your to-do tasks.
 
-![To DO App photo](https://github.com/qamarSharef27/ToDoList/blob/main/Screenshot%20(5).png)
+![To DO App photo](https://github.com/qamarSharef27/ToDoList/blob/main/Screenshot%20(14).png)
 ---
 ## Description 
 The project is implemented with HTML, CSS, and JavaScript. The HTML file (`index.html`) sets up the structure of the app, the CSS file (`style.css`) provides styling, and the JavaScript file (`main.js`) implements the app's functionality that ensure a comprehensive and user-friendly experience such as: 
