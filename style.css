@@ -93,7 +93,7 @@ body {
   flex-grow: 1;
   padding: 8px;
   border-radius: 20px;
-  background-color: #3140c6;
+  background-color: #abacb3;
 }
 
 #addButton {
@@ -103,10 +103,6 @@ body {
   border-radius: 20px;
   padding: 8px 16px;
   cursor: pointer;
-}
-
-#addButton:hover {
-  background-color: #124461;
 }
 
 #Line {
