@@ -15,22 +15,22 @@ document.addEventListener("DOMContentLoaded", function () {
         tasks.forEach((task, index) => {
             const listItem = document.createElement("li");
             listItem.innerHTML = `
-                <input type="checkbox" class="checkbox" data-index="${index}" ${task.completed ? "checked" : ""}>
+                <input type="checkbox" class="checkboxInput" data-index="${index}" ${task.completed ? "checked" : ""}>
                 <span class="Tasks">${task.text}</span>
-                <button class="EditTask"><i class="fa fa-edit"></i></button>
-                <button class="DeleteTask"><i class="fa fa-trash"></i></button>
+                <button class="ButtonEdit"><i class="fa fa-edit"></i></button>
+                <button class="ButtonDelete"><i class="fa fa-trash"></i></button>
 
             `;
             taskList.appendChild(listItem);
 
-            const deleteButton = listItem.querySelector(".DeleteTask");
+            const deleteButton = listItem.querySelector(".ButtonDelete");
             deleteButton.addEventListener("click", () => {
                 tasks.splice(index, 1);
                 updateLocalStorage();
                 renderTasks();
             });
 
-            const editButton = listItem.querySelector(".EditTask");
+            const editButton = listItem.querySelector(".ButtonEdit");
             editButton.addEventListener("click", () => {
                 const textElement = listItem.querySelector(".Tasks");
                 const inputElement = document.createElement("input");
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });            
             
         
-            const checkbox = listItem.querySelector(".checkbox");
+            const checkbox = listItem.querySelector(".checkboxInput");
             checkbox.addEventListener("change", (event) => {
                 tasks[index].completed = event.target.checked;
                 updateLocalStorage();

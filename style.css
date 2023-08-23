@@ -93,7 +93,7 @@ body {
   flex-grow: 1;
   padding: 8px;
   border-radius: 20px;
-  background-color: rgb(190, 223, 235);
+  background-color: #3140c6;
 }
 
 #addButton {
@@ -144,7 +144,7 @@ li .container {
 }
 
 li button {
-  margin: 2px;
+  margin: 6px;
   background: #3343d2;
   color: #fff;
   border: none;
