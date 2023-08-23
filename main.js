@@ -15,24 +15,24 @@ document.addEventListener("DOMContentLoaded", function () {
         tasks.forEach((task, index) => {
             const listItem = document.createElement("li");
             listItem.innerHTML = `
-                <input type="checkbox" class="task-checkbox" data-index="${index}" ${task.completed ? "checked" : ""}>
-                <span class="task-text">${task.text}</span>
-                <button class="edit-button"><i class="fa fa-edit"></i></button>
-                <button class="delete-button"><i class="fa fa-trash"></i></button>
+                <input type="checkbox" class="checkbox" data-index="${index}" ${task.completed ? "checked" : ""}>
+                <span class="taskText">${task.text}</span>
+                <button class="editButton"><i class="fa fa-edit"></i></button>
+                <button class="deleteButton"><i class="fa fa-trash"></i></button>
 
             `;
             taskList.appendChild(listItem);
 
-            const deleteButton = listItem.querySelector(".delete-button");
+            const deleteButton = listItem.querySelector(".deleteButton");
             deleteButton.addEventListener("click", () => {
                 tasks.splice(index, 1);
                 updateLocalStorage();
                 renderTasks();
             });
 
-            const editButton = listItem.querySelector(".edit-button");
+            const editButton = listItem.querySelector(".editButton");
             editButton.addEventListener("click", () => {
-                const textElement = listItem.querySelector(".task-text");
+                const textElement = listItem.querySelector(".taskText");
                 const inputElement = document.createElement("input");
                 inputElement.type = "text";
                 inputElement.value = textElement.textContent;
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });            
             
         
-            const checkbox = listItem.querySelector(".task-checkbox");
+            const checkbox = listItem.querySelector(".checkbox");
             checkbox.addEventListener("change", (event) => {
                 tasks[index].completed = event.target.checked;
                 updateLocalStorage();
