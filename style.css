@@ -6,7 +6,7 @@ html, body, h1, h2, h3, p, ul, li {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #1679b7;
+  background-color: #2632a3;
   color: #FFF;
   background-size: cover; 
   background-repeat: no-repeat; 
@@ -35,7 +35,7 @@ body {
 }
 
 #HeaderText {
-  color: #7cb8dc;
+  color: #2632a3;
   font-family: 'Racing Sans One', sans-serif;
   font-size: 2rem;
   font-weight: 400;
@@ -98,7 +98,7 @@ body {
 
 #addButton {
   border: none;
-  background: #7cb8dc;
+  background: #2632a3;
   color: #FFF;
   border-radius: 20px;
   padding: 8px 16px;
@@ -106,12 +106,12 @@ body {
 }
 
 #addButton:hover {
-  background-color: #5faad5;
+  background-color: #124461;
 }
 
 #Line {
   height: 1px;
-  background: #316ba9;
+  background: #2632a3;
   margin: 20px;  
   padding: 1px 16px;
 
