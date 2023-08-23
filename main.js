@@ -16,23 +16,23 @@ document.addEventListener("DOMContentLoaded", function () {
             const listItem = document.createElement("li");
             listItem.innerHTML = `
                 <input type="checkbox" class="checkbox" data-index="${index}" ${task.completed ? "checked" : ""}>
-                <span class="Text">${task.text}</span>
-                <button class="edit"><i class="fa fa-edit"></i></button>
-                <button class="delete"><i class="fa fa-trash"></i></button>
+                <span class="Tasks">${task.text}</span>
+                <button class="EditTask"><i class="fa fa-edit"></i></button>
+                <button class="DeleteTask"><i class="fa fa-trash"></i></button>
 
             `;
             taskList.appendChild(listItem);
 
-            const deleteButton = listItem.querySelector(".delete");
+            const deleteButton = listItem.querySelector(".DeleteTask");
             deleteButton.addEventListener("click", () => {
                 tasks.splice(index, 1);
                 updateLocalStorage();
                 renderTasks();
             });
 
-            const editButton = listItem.querySelector(".edit");
+            const editButton = listItem.querySelector(".EditTask");
             editButton.addEventListener("click", () => {
-                const textElement = listItem.querySelector(".Text");
+                const textElement = listItem.querySelector(".Tasks");
                 const inputElement = document.createElement("input");
                 inputElement.type = "text";
                 inputElement.value = textElement.textContent;
