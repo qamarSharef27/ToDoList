@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const listItem = document.createElement("li");
             listItem.innerHTML = `
             <input type="checkbox" id="checkbox-${index}" class="checkboxInput" data-index="${index}" ${task.completed ? "checked" : ""}>
-            <span class="Tasks">${task.text}</span>
-                <button class="ButtonEdit" aria-label="Edit Task"><i class="fa fa-edit"></i></button>
+            <label for="checkbox-${index}">${task.text}</label>
+            <button class="ButtonEdit" aria-label="Edit Task"><i class="fa fa-edit"></i></button>
                 <button class="ButtonDelete" aria-label="Delete Task"><i class="fa fa-trash"></i></button>
 
             `;
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const editButton = listItem.querySelector(".ButtonEdit");
             editButton.addEventListener("click", () => {
-                const textElement = listItem.querySelector(".Tasks");
+                const textElement = listItem.querySelector("label");
                 const inputElement = document.createElement("input");
                 inputElement.type = "text";
                 inputElement.value = textElement.textContent;

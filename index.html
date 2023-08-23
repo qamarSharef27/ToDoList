@@ -22,14 +22,16 @@
 
       <div class="col-3 col-s-3 menu">
         <div id="addTask">
-            <input type="text" name="task" id="TaskClass" placeholder="Add New Task:">
-            <button id="addButton"> <span id="ButtonText"> AddTask </span> </button>
+            <input type="text" name="task" id="TaskClass" aria-labelledby="TaskLabel" placeholder="Add New Task:">
+            <button id="addButton" aria-label="Add Task"> <span id="ButtonText"> AddTask </span> </button>
         </div>
     </div>
 
         <hr id="Line">
 
         <div class="col-12 col-s-12 ">
+
+        <label for="TaskClass">Task:</label>
 
         <ul id="taskList"></ul>
 
