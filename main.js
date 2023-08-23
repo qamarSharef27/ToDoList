@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
         tasks.forEach((task, index) => {
             const listItem = document.createElement("li");
             listItem.innerHTML = `
-                <input type="checkbox" class="checkboxInput" data-index="${index}" ${task.completed ? "checked" : ""}>
-                <span class="Tasks">${task.text}</span>
-                <button class="ButtonEdit"><i class="fa fa-edit"></i></button>
-                <button class="ButtonDelete"><i class="fa fa-trash"></i></button>
+            <input type="checkbox" id="checkbox-${index}" class="checkboxInput" data-index="${index}" ${task.completed ? "checked" : ""}>
+            <span class="Tasks">${task.text}</span>
+                <button class="ButtonEdit" aria-label="Edit Task"><i class="fa fa-edit"></i></button>
+                <button class="ButtonDelete" aria-label="Delete Task"><i class="fa fa-trash"></i></button>
 
             `;
             taskList.appendChild(listItem);
